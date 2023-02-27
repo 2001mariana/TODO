@@ -1,0 +1,13 @@
+.Header {
+    height: 70px;
+    border: 1px solid black;
+
+    &__authenticated--true {
+        color: blue;
+        background-image: linear-gradient(90deg, #4c54e8, #3139d5, #4c54e8);
+    }
+
+    &__authenticated--false {
+        color: red;
+    }
+}

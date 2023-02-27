@@ -1,0 +1,103 @@
+  $input-label-color: #8094bc;
+  $input-label-invalid-color: #ef5350;
+  /* Field */
+  $input-field-bg-color: transparent;
+  $input-field-border-color: #d5dded;
+  $input-field-color: #8094bc;
+  $input-field-focus-border-color: #8eaed7;
+  $input-field-focus-box-shadow-color: #c6d6eb;
+  $input-field-invalid-border-color: #ef5350;
+  $input-field-invalid-box-shadow-color: #eed4d3;
+  /* Invalid Feedback */
+  $input-invalid-feedback-color: #ef5350;
+
+.Input {
+  margin-bottom: 16px;
+
+  input::placeholder {
+    color: #B9C6E0;
+    font-size: 14px;
+  }
+}
+
+
+.Input__invalid-feedback {
+  display: flex;
+  color: $input-invalid-feedback-color;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+
+.Input--invalid {
+  .Input__label {
+    color: $input-label-invalid-color;
+  }
+
+  .Input__field,
+  .Input__field:focus {
+    border-color: $input-field-invalid-border-color;
+  }
+
+  .Input__field:focus {
+    box-shadow: 0 0 0 3.5px $input-field-invalid-box-shadow-color;
+  }
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  @supports (mix-blend-mode: darken) {
+    position: relative;
+    mix-blend-mode: lighten;
+
+    &__label {
+      position: absolute;
+      left: 3em;
+      top: -0.28em;
+      background: #000;
+    }
+  }
+
+  &__label {
+    padding: 0 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    letter-spacing: 0.1em;
+    color: #ccd;
+    color: rgba(255, 220, 255, 0.6);
+    cursor: pointer;
+  }
+
+  &__input {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    height: calc(1em + 1.6em + 0.5em);
+    width: 100%;
+    padding: 0.8em 1em;
+    border: 0.075em solid transparent;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 0.5em;
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease-out;
+
+    &:hover {
+      background-position: 100% 0;
+    }
+
+    // &:focus {
+    //   outline: 2px dashed #ad2b89;
+    //   outline-offset: 0.5em;
+    // }
+  }
+}
+
