@@ -1,9 +1,10 @@
 import { useContext } from 'react'
 
 import Button from '../../Components/Button'
+import Card from '../../Components/Card'
 import Input from '../../Components/Input'
+import { AppContext } from '../../Context/ContextApp'
 import { AppContextProps } from '../../Models/AppContextProps'
-import { AppContext } from '../../Pages/App'
 
 import './Login.scss'
 
@@ -17,7 +18,7 @@ const Login = () => {
     <>
       {LangIsEN && (
         <div className="Login">
-          <div className="Login__card">
+          <Card>
             <Input label="Email" />
             <Input label="Name" />
             <Input label="Password" />
@@ -25,13 +26,13 @@ const Login = () => {
               <Button label="Sign in" size="large" />
               <Button label="Sign up" size="large" />
             </div>
-          </div>
+          </Card>
         </div>
       )}
 
       {LangIsPT && (
         <div className="Login">
-          <div className="Login__card">
+          <Card>
             <Input label="Email" />
             <Input label="Nome" />
             <Input label="Senha" />
@@ -39,7 +40,7 @@ const Login = () => {
               <Button label="Entrar" size="large" />
               <Button label="Criar conta" size="large" />
             </div>
-          </div>
+          </Card>
         </div>
       )}
     </>

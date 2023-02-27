@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { useContext } from 'react'
+import { AppContext } from '../../Context/ContextApp'
 import { AppContextProps } from '../../Models/AppContextProps'
-import { AppContext } from '../../Pages/App'
 
 import './Header.scss'
 

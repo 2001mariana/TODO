@@ -1,23 +1,14 @@
-import React from 'react'
-import { AppContextProps } from '../Models/AppContextProps'
+import { AppContext } from '../Context/ContextApp'
 
 import './App.scss'
 import Login from './Login'
-
-const defaultAppContext: AppContextProps = {
-  authenticated: false,
-  lang: 'pt',
-  theme: 'light'
-}
-
-export const AppContext = React.createContext(defaultAppContext)
 
 const App = () => {
   return (
     <AppContext.Provider
       value={{
         authenticated: false,
-        lang: 'en',
+        lang: 'pt',
         theme: 'light'
       }}
     >
