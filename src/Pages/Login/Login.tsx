@@ -2,6 +2,7 @@ import { useContext } from 'react'
 
 import Button from '../../Components/Button'
 import Card from '../../Components/Card'
+import ContainerAnimatedBackground from '../../Components/ContainerAnimatedBackground'
 import Input from '../../Components/Input'
 import { AppContext } from '../../Context/ContextApp'
 import { AppContextProps } from '../../Models/AppContextProps'
@@ -18,6 +19,7 @@ const Login = () => {
     <>
       {LangIsEN && (
         <div className="Login">
+          <ContainerAnimatedBackground />
           <Card>
             <Input label="Email" />
             <Input label="Name" />

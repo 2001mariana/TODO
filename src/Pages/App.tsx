@@ -8,7 +8,7 @@ const App = () => {
     <AppContext.Provider
       value={{
         authenticated: false,
-        lang: 'pt',
+        lang: 'en',
         theme: 'light'
       }}
     >
